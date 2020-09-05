@@ -15,4 +15,6 @@ public interface UserService {
 	public UserVO getUser(UserVO vo);
 	
 	public List<UserVO> getUserList(UserVO vo);
+	
+	public char getUserLevel(int userId);
 }
