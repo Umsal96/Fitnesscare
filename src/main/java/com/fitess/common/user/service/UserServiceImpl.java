@@ -43,24 +43,4 @@ public class UserServiceImpl implements UserService {
 		return userDAO.getUserList(vo);
 	}
 
-	@Override
-	public char getUserLevel(int userId) {
-		char userLevel = 'U';
-		String sql = "SELECT user_level FROM user_info WHERE user_id=?";
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		try {
-			conn = getConnection(); // Modify this after creating a connection object
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, userId); // Insert parameter value
-			rs = pstmt.executeQuery();
-			userLevel = rs.getChar("user_level");
-		} catch(SQLException e) {
-			e.printStackTrace();
-		}
-		
-		return userLevel;
-	}
-
 }
