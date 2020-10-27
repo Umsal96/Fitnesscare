@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+ 
+ 
+
+  @import url(https://fonts.googleapis.com/css?family=Oswald);
+  @import url(https://fonts.googleapis.com/css?family=Quattrocento);
+  .trainer {
+  font-family: 'Quattrocento', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #141414;
+  text-align: left;
+  line-height: 1.4em;
+  font-size: 16px;
+
+}
+.trainer * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.trainer img {
+  max-width: 100%;
+  vertical-align: top;
+
+}
+.trainer figcaption {
+  position: absolute;
+  top: calc(77%);
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px 25px 65px;
+
+}
+.trainer figcaption:before {
+  position: absolute;
+  content: '';
+  z-index: 2;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-image: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+
+}
+.trainer h3,
+.trainer p {
+  margin: 0 0 10px;
+}
+.trainer h3 {
+  font-weight: 200;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  font-family: 'Oswald', Arial, sans-serif;
+  text-transform: uppercase;
+}
+.trainer p {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+.trainer a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.trainer:hover figcaption,
+.trainer.hover figcaption {
+  top: 300px;
+}
+
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+   
+  }
+ 
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+   
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-2 {
+    background-color: black;
+    color: white;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+    .zoom {
+   overflow: hidden;
+ 
+   
+   background-color: #fff;
+   border: 1px solid #e5e5e5;
+   box-shadow: 0px 0px 0px 0px #e5e5e5;
+   box-sizing: border-box;
+   border-radius: 10px;
+   transition: transform .3s;
+   width: 300px;
+   height: 250px;
+    margin-left:30px;
+    margin-top: 30px;
+   padding-top: 20px;
+   display: inline-block; /*로로 배치 */
+}
+
+.zoom:hover {
+   -ms-transform: scale(1.1);
+   -webkit-transform: scale(1.1);
+   transform: scale(1.1);
+}
+
+.zoom img {
+   width: 100%;
+
+  
+}
+   .menu {
+   overflow: hidden;
+    border:solid 1px black;
+   
+   
+  margin-top: 50px;
+  border:solid 5px white;
+  border-radius: 10px;
+   background-repeat: no-repeat;
+   width: 1200px;
+   height:350px;
+  
+   display: inline-block; /*로로 배치 */
+}
+  .btn {
+    display:block;
+    width:200px;
+    height:50px;
+    line-height:40px;
+    background-color:#66aaff;
+    text-align:center;
+    color:#333; transition:all 0.9s, color 0.3;
+  }
+  .btn:hover {
+    color: white;
+  }
+  .hover3:hover { 
+  box-shadow: 0 80px 0 0 rgba(0,0,0,0.25) inset,
+   0 -80px 0 0 rgba(0,0,0,0.25) inset; }
+
+
+
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+ 
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+   .dropdown-menu li a {
+       
+    
+  }
+  .dropdown-menu li a:hover {
+    
+  
+    
+  }
+  
+
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+
+  ul>li {
+    list-style-type: none;
+  }
+  .slide94 {
+      height:550px;
+      overflow:hidden;
+    }
+    .slide94 ul {
+      width:calc(100% * 2);
+      display:flex;
+      animation:slide 15s infinite;
+      } /* slide를 8초동안 진행하며 무한반복 함 */
+    .slide94 li {
+      width:calc(100% / 2);
+      height:700px;
+    }
+    .slide94 li:nth-child(1) {
+      background:#000000;
+    }
+    .slide94 li:nth-child(2){
+      background:#000000;
+    }
+  
+    @keyframes slide {
+      0% {
+        margin-left:0;
+        } /* 0 ~ 10  : 정지 */
+      10% {
+        margin-left:0;
+        } /* 10 ~ 25 : 변이 */
+      25% {
+        margin-left:-100%;
+        } /* 25 ~ 35 : 정지 */
+
+  }
+
+  </style>
+</head>
+
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" style="overflow-x: hidden; ">
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a style="font-size: 20px;" class="navbar-brand" href="#myPage">FITNESSCARE</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul style="font-size: 11px;  "  class="nav navbar-nav navbar-right">
+        <li style="margin-right: 80px;" ><a  href="#Fitnesscare">About</a></li>
+        <li style="margin-right: 80px;"><a   href="#program">Program</a></li>
+        <li style="margin-right: 80px;"><a   href="#diet">Diet</a></li>
+        <li style="margin-right: 80px;"><a  href="#tour">Community</a></li>
+        <li style="margin-right: 80px;"><a href="#band">Shoppingmall</a></li>
+        <li style="margin-right: 80px;"><a  href="#">Contact</a></li>
+      </ul>
+          
+    
+       
+        
+        
+     
+    </div>
+  
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="C:\images/main.jpg" style="background-repeat: no-repeat; background-position: center; background-size: cover;" alt="New York" width="1200" height="700">
+        <div class="carousel-caption">
+          <h2 style=" color:#2E9AFE; font-size: 25px; font-family: sans-serif; text-align: left; position: relative;top: -250px; left: -200px;">Welcome to Fitnesscare</h2>
+          <button class="btn hover3" style=" color:white;width: 140px; height: 50px; font-weight: bold; font-size: 20px;  background-color: #243B55; border-radius: 5px; border:0; outline: 0; position: relative;  top: -180px; text-align: center; left: -200px;">Get Started</button>
+          <button class="btn hover3" style=" color: white; width: 140px; height: 50px; font-weight: bold; font-size: 20px; background-color: #243B55; border-radius: 5px; border:0; outline: 0; position: relative; top: -230px; left: -20px;  text-align: center;">Contact Us</button>
+          <p style=" font-family: sans-serif; font-size: 40px; text-align: left; position: relative; top: -365px; left: -200px; ">Nothing happens if nothing is done.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="C:\images/diet.jpg" style="background-size: cover; background-position: center; background-repeat: no-repeat;" alt="Chicago" width="1200" height="700">
+        <div class="carousel-caption">
+        <h2 style=" color:#2E9AFE; font-size: 25px; font-family: sans-serif; text-align: left; position: relative;top: -255px; left: -247px;">Welcome to Fitnesscare</h2>
+         <button class="btn hover3" style=" color:white;width: 140px; height: 50px; font-weight: bold; font-size: 20px;  background-color: #243B55; border-radius: 5px; border:0; outline: 0; position: relative;  top: -180px; text-align: center; left: -245px;">Get Started</button>
+          <button class="btn hover3" style=" color: white; width: 140px; height: 50px; font-weight: bold; font-size: 20px; background-color: #243B55; border-radius: 5px; border:0; outline: 0; position: relative; top: -230px; left: -65px;  text-align: center;">Contact Us</button>
+         <p style=" font-family: sans-serif; font-size: 40px; text-align: left; position: relative; top: -365px; left: -250px; color: black; ">Take a healthy diet with a variety of diets.</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="C:\images/main6.png" style="background-position: center; background-size: cover; background-repeat: no-repeat;" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+         <h2 style=" color:#2E9AFE; font-size: 25px; font-family: sans-serif; text-align: right; position: relative;top: -350px; right: -50px;">Welcome to Fitnesscare</h2>
+          <p style="font-family: sans-serif;font-size: 40px; text-align: center; position: relative;top: -365px;
+          right: -420px;">There is no shortcut.<br>You have to keep plugging away</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    
+</div>
+
+<!-- Container (The Band Section) -->
+<div id="Fitnesscare" class="container text-center">
+  <h1>FITNESSCARE</h1>
+  <p style="font-size: 20px;"><em>Let's exercise for our health.</em></p>
+  <p style="font-size: 15px;">Fitnesscare is a space created for one's health. You can get information by sharing various exercise methods
+    and diets you know with others through the community. Also, you can purchase exercise equipment and supplements that you need efficiently at the shoppingmall. Through the community, you get together with other people to pass on your exercise know-how. I hope to live a better life than now through fitnesscare. Click the button below to get started right away.</p>
+  <br>
+  <button style="border-radius: 5px; border:0; outline: 0; width:120px; height: 40px; background-color: #2E9AFE; color: white; font-size: 20px;">Join</button>
+</div>
+<!-- Container (TOUR Section) -->
+<div  id="program" class="bg-1">
+  <div  class="container-fluid">
+    <h1 style=" color: white;" class="text-center">Various programs</h1>
+    <p class="text-center" style="font-size: 20px; ">Our fitness center offers a variety of programs for our members.</p>
+ 
+   
+    
+    <div class="row text-center">
+      <div style="margin-left: -20px;"   class="col-lg-12">
+     <div style=" text-align:center;">
+   <div style="background-image: url('C:/images/boxing.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Boxing</p></div>
+    <div style="background-image: url('C:/images/yoga.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Yoga</p></div>
+     <div style="background-image: url('C:/images/dance.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Dance</p></div>
+      <div style="background-image: url('C:/images/pt.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Personal training</p></div>
+       <div style="background-image: url('C:/images/running.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Running</p></div>
+        <div style="background-image: url('C:/images/ft.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Pilates</p></div>
+         <div style="background-image: url('C:/images/sp.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Spinning</p></div>
+          <div style="background-image: url('C:/images/pushup.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Calisthenics</p></div>
+           <div style="background-image: url('C:/images/pullup.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Calisthenics</p></div>
+            <div style="background-image: url('C:/images/gallery-1.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Weight training</p></div>
+             <div style="background-image: url('C:/images/dead.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Weight training</p></div>
+              <div style="background-image: url('C:/images/bench.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Weight training</p></div>
+               <div style="background-image: url('C:/images/sq.png'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Squirt</p></div>
+                <div style="background-image: url('C:/images/gallery-3.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Weight training</p></div>
+                 <div style="background-image: url('C:/images/main6.jpg.'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 160px;"></p>Personal training</div>
+                  <div style="background-image: url('C:/images/main7.jpg'); background-repeat: no-repeat; color: white; text-align: center; font-weight: bold; font-size: 40px;" class="zoom"><p style="padding-top: 170px;">Personal training</p></div>
+        
+            
+ </div>
+
+ </div>
+  </div>
+</div>
+</div>
+
+
+  
+  <!-- Modal -->
+  
+  <div style="background-color: black; color: white; margin-top: 100px; width: 100%; height: auto;" class="container">
+  
+    <div style=" text-align:center;" class="container-fluid">
+        <h1 style="font-size: 50px; font-weight: bold; color:white; margin-top: -50px; text-align: center;">professional trainer</h1>
+    <p style="font-weight: bold; font-size: 20px; color: white; text-align: center;" class="row ">Here are experts to help you exercise.</p>
+    <div  class="col-lg-16">
+      
+    <figure style=" display: inline-block; border:solid 1px white; min-width: 392px;min-height: 431px;
+    " class="trainer">
+      <img style="width: 392px; height: 330px;" src="C:\images/trainer-1.jpg">
+      <figcaption>
+        <h3 style="font-weight: bold; font-size: 20px; text-align: center;"> Zackary Greinke</h3>
+        <p style="text-align: center;">non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+      </figcaption>
+      <a href="#"></a>
+    </figure>
+     <figure style="  display: inline-block; border:solid 1px white; min-width: 392px;min-height: 431px;
+    " class="trainer">
+      <img style="width: 392px; height: 330px;" src="C:\images/trainer-2.jpg">
+      <figcaption>
+        <h3 style="font-weight: bold; font-size: 20px; text-align: center;">  Aroldis Chapman </h3>
+        <p style="text-align: center;">non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+      </figcaption>
+      <a href="#"></a>
+    </figure>
+     <figure style=" display: inline-block; border:solid 1px white; min-width: 392px;min-height: 431px;
+    " class="trainer">
+      <img style="width: 392px; height: 330px;" src="C:\images/trainer-3.jpg">
+      <figcaption>
+        <h3 style="font-weight: bold; font-size: 20px; text-align: center;"> Ronda Rousey</h3>
+        <p style="text-align: center;">non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+      </figcaption>
+      <a href="#"></a>
+    </figure>
+  
+  
+  
+   
+    </div>
+  </div>
+    </div>
+  
+ 
+
+
+<!-- Container (Contact Section) -->
+<div style="width: 100%; height: 1600px; margin-top: 100px; background-color: black; " id="diet" class="container-fluid">
+  
+     <h3 style="font-weight: bold; font-size: 45px; color: white; margin-top: 30px;" class="text-center">Diet menu</h3>
+  <p style="font-size: 20px; margin-top: -20px; color: white;" class="text-center"><em>Let me tell you about this month's popular diet.</em></p>
+  <div class="col-lg-12">
+  <div class="menu" style="border:solid 3px white; width: 1200px; height: 400px;"></div>
+  <div class="menu" style="border:solid 3px white; width: 1200px; height: 400px;"></div>
+  <div class="menu" style="border:solid 3px white; width: 1200px; height: 400px;"></div>
+  
+  
+  </div>
+
+ </div>
+
+ <div style="margin-top: 100px; width: 1559px; margin-left: -40px;   " class="slide94">
+    <ul>
+      <li><h3 style="text-align: center; color: white; font-size: 40px; margin-top: 100px;">Successful story</h3>
+        <br><p style="text-align: center; color: white; font-size: 20px; margin-top: -25px;">I gained confidence through fitness care.</p>
+        <p style="margin-top: 30px; color: white; text-align: center; font-weight: bold; font-size: 25px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud<br> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+      <li><h3 style="text-align: center; color: white; font-size: 40px; margin-top: 100px;">Diet Review</h3>
+        <br><p style="text-align: center; color: white; font-size:20px; margin-top: -25px;">I gained confidence through diet.</p>
+        <p style="margin-top: 30px; color: white; text-align: center; font-weight: bold; font-size: 25px;">Through fitness care, I was able to succeed in dieting<br> through various help such as exercise methods and diet recommendations <br>by professional teachers.</p>
+      </li>
+    </ul>
+  </div>
+
+  <footer style="margin-top: 100px; background-color: black; border:solid 1px white; " class="footer-section">
+     <a href="#myPage" title="To Top">
+    <span style="position: relative; left: 700px; top: 20px;" class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+
+
+        <div style="width: 1400px; border:solid 1px red; height: 150px; margin-top: 50px; " class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="fitness-number">
+                        <h3 style="color: white; font-weight: bold; font-size: 22px; text-align: left; margin-top: -50px; ">Phone</h3>
+                        <p style="color: white; font-weight: bold; font-size: 17px; text-align: left; margin-top: -20px; ">(123) 118 9999 - (123) 118 9999</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fitness-address">
+                        <h3 style="color: white; font-weight: bold; font-size: 22px; text-align: center; margin-top: -50px;">Address</h3>
+                        <p style="color: white; font-weight: bold; font-size: 17px; text-align: center;  margin-top: -20px;">KR, 26th, 3rd and 6th floors of Danseongsa Temple in Myo-dong, Jongno-gu, Seoul</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fitness-email">
+                        <h3 style="color: white; font-weight: bold; font-size: 22px; text-align: right; margin-top: -50px; ">Email</h3>
+                        <p style="color: white; font-weight: bold; font-size: 17px; text-align: right; margin-top: -20px; ">chicmanx@Gutim.com</p>
+                    </div>
+                </div>
+            </div>
+          
+
+            <div class="subscribe-option set-bg" style="border:solid 1px blue; background-image: url('C:/images/footer.jpg'); width: 1520px; height: 200px;border:solid 1px white;  background-repeat: no-repeat;  margin-left: -180px; margin-top: 70px;  ">
+                <div class="so-text">
+                    <p style="font-weight: bold; color: white; font-size: 25px; padding-left: 60px; padding-top: 55px;">Subscribe To Our Mailing List<br> <span style="font-size: 20px; color: white; font-weight: bold;">Sign up to receive the latest information</span></p>
+                   
+                </div>
+                <form action="#" class="subscribe-form">
+                    <input style="text-align: center; position: relative; top: -120px; left: 1017px; width: 200px; height: 50px;" type="text" placeholder="Enter Your Mail">
+                    <button style="  position: relative; top: -102px;border:0; outline: 0; left:987px;  width: 75px; height: 50px; background-image: url('C:/images/check.jpg');"></button>
+                </form>
+            </div>
+          </div>
+             <div  class="copyright-text">
+                <p style="color: white; font-weight: bold; font-size: 25px; margin-top: 280px; text-align: center; ">© Copyright 2020 All rights reserved | This template is made with by CHICMANX</p>
+                <div style="border:solid 1px white; margin-top: -55px;word-spacing: 5px; padding-left: 40px;  width: 250px; float: right;" class="footer-social">
+                  <a href="https://www.kakaocorp.com/"><img style="width: 50px; height: 40px;" src="C:\images/kakao.jfif"></a>
+                  <a href="https://www.facebook.com/"><img src="C:\images/facebook.jpg"></a>
+                  <a href="https://www.instagram.com/?hl=ko"><img src="C:\images/instar.png"></a>
+                </div>
+            </div>
+        </div>
+
+      </footer>
+  
+ 
+   
+
+
+
+
+
+
+   
+  
+
+
+
+
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+})
+$(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
+
+</script>
+
+</body>
+</html>

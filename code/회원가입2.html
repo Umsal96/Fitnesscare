@@ -1,0 +1,451 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+ 
+ 
+
+  @import url(https://fonts.googleapis.com/css?family=Oswald);
+  @import url(https://fonts.googleapis.com/css?family=Quattrocento);
+  .trainer {
+  font-family: 'Quattrocento', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #141414;
+  text-align: left;
+  line-height: 1.4em;
+  font-size: 16px;
+
+}
+.trainer * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.trainer img {
+  max-width: 100%;
+  vertical-align: top;
+
+}
+.trainer figcaption {
+  position: absolute;
+  top: calc(77%);
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px 25px 65px;
+
+}
+.trainer figcaption:before {
+  position: absolute;
+  content: '';
+  z-index: 2;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-image: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+
+}
+.trainer h3,
+.trainer p {
+  margin: 0 0 10px;
+}
+.trainer h3 {
+  font-weight: 200;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  font-family: 'Oswald', Arial, sans-serif;
+  text-transform: uppercase;
+}
+.trainer p {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+.trainer a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.trainer:hover figcaption,
+.trainer.hover figcaption {
+  top: 300px;
+}
+
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+   
+  }
+ 
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+   
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-2 {
+    background-color: black;
+    color: white;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+    .zoom {
+   overflow: hidden;
+ 
+   
+   background-color: #fff;
+   border: 1px solid #e5e5e5;
+   box-shadow: 0px 0px 0px 0px #e5e5e5;
+   box-sizing: border-box;
+   border-radius: 10px;
+   transition: transform .3s;
+   width: 300px;
+   height: 250px;
+    margin-left:30px;
+    margin-top: 30px;
+   padding-top: 20px;
+   display: inline-block; /*로로 배치 */
+}
+
+.zoom:hover {
+   -ms-transform: scale(1.1);
+   -webkit-transform: scale(1.1);
+   transform: scale(1.1);
+}
+
+.zoom img {
+   width: 100%;
+
+  
+}
+   .menu {
+   overflow: hidden;
+    border:solid 1px black;
+   
+   
+  margin-top: 50px;
+  border:solid 5px white;
+  border-radius: 10px;
+   background-repeat: no-repeat;
+   width: 1200px;
+   height:350px;
+  
+   display: inline-block; /*로로 배치 */
+}
+  .btn {
+    display:block;
+    width:200px;
+    height:50px;
+    line-height:40px;
+    background-color:#66aaff;
+    text-align:center;
+    color:#333; transition:all 0.9s, color 0.3;
+  }
+  .btn:hover {
+    color: white;
+  }
+  .hover3:hover { 
+  box-shadow: 0 80px 0 0 rgba(0,0,0,0.25) inset,
+   0 -80px 0 0 rgba(0,0,0,0.25) inset; }
+
+
+
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+ 
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+   .dropdown-menu li a {
+       
+    
+  }
+  .dropdown-menu li a:hover {
+    
+  
+    
+  }
+  
+
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+
+  ul>li {
+    list-style-type: none;
+  }
+  .slide94 {
+      height:550px;
+      overflow:hidden;
+    }
+    .slide94 ul {
+      width:calc(100% * 2);
+      display:flex;
+      animation:slide 15s infinite;
+      } /* slide를 8초동안 진행하며 무한반복 함 */
+    .slide94 li {
+      width:calc(100% / 2);
+      height:700px;
+    }
+    .slide94 li:nth-child(1) {
+      background:#000000;
+    }
+    .slide94 li:nth-child(2){
+      background:#000000;
+    }
+  
+    @keyframes slide {
+      0% {
+        margin-left:0;
+        } /* 0 ~ 10  : 정지 */
+      10% {
+        margin-left:0;
+        } /* 10 ~ 25 : 변이 */
+      25% {
+        margin-left:-100%;
+        } /* 25 ~ 35 : 정지 */
+
+  }
+
+  </style>
+</head>
+
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" style="overflow-x: hidden; ">
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a style="font-size: 20px;" class="navbar-brand" href="#myPage">FITNESSCARE</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul style="font-size: 11px;  "  class="nav navbar-nav navbar-right">
+        <li style="margin-right: 80px;" ><a  href="#Fitnesscare">About</a></li>
+        <li style="margin-right: 80px;"><a   href="#program">Program</a></li>
+        <li style="margin-right: 80px;"><a   href="#diet">Diet</a></li>
+        <li style="margin-right: 80px;"><a  href="#tour">Community</a></li>
+        <li style="margin-right: 80px;"><a href="#band">Shoppingmall</a></li>
+        <li style="margin-right: 80px;"><a  href="#">Contact</a></li>
+      </ul>
+          
+    
+       
+        
+        
+     
+    </div>
+  
+  </div>
+</nav>
+  <h3 style="text-align: center; font-weight: bold; color: black; margin-top: 300px; ">An entry marked (*) must be entered.</h3>
+  <h3 style="text-align: center; font-weight: bold;  color: black; margin-top: -10px; font-size: 17px;">(If the information is falsely written,<br> the approval may be suspended or deleted arbitrarily,<br> so please be careful.)</h3>
+  <hr style="border:solid 1px black; width: 1400px; margin-top: 50px;">
+  <div id="information" style="width: 1520px; height: 1000px; border:solid 1px black;">
+    <hr style="width: 1400px; margin-top: 50px; border:solid 1px #F2F2F2;">
+    <h3 style="margin-left: 200px;">ID<span style="color: red; position: relative; top: 5px; left: 5px;">*</span></h3>
+    <form>
+      <input type="text" name="" style="color: black; border:solid 1px #F2F2F2; outline: solid 1px #F2F2F2; text-align: center; width: 200px; height: 40px; position: relative; top: -60px; left: 300px;">
+      <button style="width: 60px; height: 30px; position: relative; top: -60px; left: 330px; ">Check</button>
+    </form>
+      <h5 style="position: relative; top: -55px; left: 150px; color: black;   font-size: 15px;">Please enter the ID in English and numeric combinations of 3 to 20 characters.</h5>
+    
+    <hr style="width: 1400px; margin-top: -50px; border:solid 1px #F2F2F2;">
+      <h3 style="margin-left: 75px;">Password<span style="color: red; position: relative; top: 5px; left: 5px;">*</span></h3>
+      <form>
+      <input type="Password" name="" style="color: black; border:solid 1px #F2F2F2; outline: solid 1px #F2F2F2; text-align: center; width: 200px; height: 40px; position: relative; top: -60px; left: 300px;">
+    </form>
+     <h5 style="position: relative; top: -55px; left: 150px; color: black;   font-size: 15px;">Only 4 to 12 English characters and numbers are allowed.</h5>
+    <hr style="width: 1400px; margin-top: -50px; border:solid 1px #F2F2F2;">
+     <h3 style="margin-left: 75px;">Confirm <br>Password<span style="color: red; position: relative; top: 5px; left: 5px;">*</span></h3>
+      <form>
+      <input type="Password" name="" style="color: black; border:solid 1px #F2F2F2; outline: solid 1px #F2F2F2; text-align: center; width: 200px; height: 40px; position: relative; top: -60px; left: 300px;">
+    </form>
+    <hr style="width: 1400px; margin-top: -50px; border:solid 1px #F2F2F2;">
+       <h3 style="margin-left: 142px;">Email<span style="color: red; position: relative; top: 5px; left: 5px;">*</span></h3>
+        <form>
+      <input type="text" name="" style="color: black; border:solid 1px #F2F2F2; outline: solid 1px #F2F2F2; text-align: center; width: 200px; height: 40px; position: relative; top: -60px; left: 300px;"><span style="position: relative; top: -60px; left: 320px; font-size: 25px;">@</span>
+      <select style="border:solid 1px #F2F2F2; outline: solid 1px #F2F2F2; position: relative; top: -60px; left: 335px; height: 40px; text-align: center;">
+        <option >선택하세요</option>
+        <option>naver.com</option>
+        <option>hanmail.net</option>
+        <option>gmail.com</option>
+        <option>직접 입력하세요.</option>
+      </select>
+       <h5 style="position: relative; top: -55px; left: 150px; color: black;   font-size: 15px;">I will receive newsletters or notices.</h5>
+       <input type="checkbox" name=""  style="width: 18px; height: 18px; position: relative; top: -87px; left: 120px;">
+        <button style="width: 80px; height: 30px; position: relative; top: -130px; left: 710px; ">Certified</button>
+         <hr style="width: 1400px; margin-top: -75px; border:solid 1px #F2F2F2;">
+    </form>
+    <button style="width: 120px; font-size: 15px; height: 35px; position: relative; left: 600px;">previous phase</button><button style=" font-size: 15px; height: 35px; width: 90px; position: relative; left: 700px;">next step</button>
+  </div>
+  <footer style="margin-top: 100px; background-color: black; border:solid 1px white; " class="footer-section">
+    
+
+
+        <div style="width: 1400px; border:solid 1px red; height: 150px; margin-top: 50px; " class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="fitness-number">
+                        <h3 style="color: white; font-weight: bold; font-size: 22px; text-align: left; margin-top: -50px; ">Phone</h3>
+                        <p style="color: white; font-weight: bold; font-size: 17px; text-align: left; margin-top: -20px; ">(123) 118 9999 - (123) 118 9999</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fitness-address">
+                        <h3 style="color: white; font-weight: bold; font-size: 22px; text-align: center; margin-top: -50px;">Address</h3>
+                        <p style="color: white; font-weight: bold; font-size: 17px; text-align: center;  margin-top: -20px;">KR, 26th, 3rd and 6th floors of Danseongsa Temple in Myo-dong, Jongno-gu, Seoul</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fitness-email">
+                        <h3 style="color: white; font-weight: bold; font-size: 22px; text-align: right; margin-top: -50px; ">Email</h3>
+                        <p style="color: white; font-weight: bold; font-size: 17px; text-align: right; margin-top: -20px; ">chicmanx@Gutim.com</p>
+                    </div>
+                </div>
+            </div>
+          
+
+            <div class="subscribe-option set-bg" style="border:solid 1px blue; background-image: url('C:/images/footer.jpg'); width: 1520px; height: 200px;border:solid 1px white;  background-repeat: no-repeat;  margin-left: -180px; margin-top: 70px;  ">
+                <div class="so-text">
+                    <p style="font-weight: bold; color: white; font-size: 25px; padding-left: 60px; padding-top: 55px;">Subscribe To Our Mailing List<br> <span style="font-size: 20px; color: white; font-weight: bold;">Sign up to receive the latest information</span></p>
+                   
+                </div>
+                <form action="#" class="subscribe-form">
+                    <input style="text-align: center; position: relative; top: -120px; left: 1017px; width: 200px; height: 50px;" type="text" placeholder="Enter Your Mail">
+                    <button style="  position: relative; top: -102px;border:0; outline: 0; left:987px;  width: 75px; height: 50px; background-image: url('C:/images/check.jpg');"></button>
+                </form>
+            </div>
+          </div>
+             <div  class="copyright-text">
+                <p style="color: white; font-weight: bold; font-size: 25px; margin-top: 280px; text-align: center; ">© Copyright 2020 All rights reserved | This template is made with by CHICMANX</p>
+                <div style="border:solid 1px white; margin-top: -55px;word-spacing: 5px; padding-left: 40px;  width: 250px; float: right;" class="footer-social">
+                  <a href="https://www.kakaocorp.com/"><img style="width: 50px; height: 40px;" src="C:\images/kakao.jfif"></a>
+                  <a href="https://www.facebook.com/"><img src="C:\images/facebook.jpg"></a>
+                  <a href="https://www.instagram.com/?hl=ko"><img src="C:\images/instar.png"></a>
+                </div>
+            </div>
+        </div>
+
+      </footer>
+  
+ 
+   
+
+
+
+
+
+
+   
+
+</body>
+</html>
