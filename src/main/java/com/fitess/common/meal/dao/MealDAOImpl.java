@@ -1,11 +1,12 @@
 package com.fitess.common.meal.dao;
 
+import com.fitess.common.meal.vo.MealVO;
+
 public class MealDAOImpl implements MealDAO{
 
 	@Override
-	public boolean insertMeal() {
-		boolean check = false;
-		return check;
+	public void insertMeal(MealVO vo) {
+		
 	}
 
 }

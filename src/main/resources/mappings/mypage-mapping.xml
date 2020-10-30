@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MyPageDAO">
+
+	<resultMap type="String" id="userLevelResult">
+		<id property="user_id" column="USER_ID"/>
+		<result property="user_level" column="USER_LEVEL"/>
+	</resultMap>
+	
+	<resultMap type="com.fitess.common.program.vo.ProgramVO" id="programResult">
+		<id property="user_id" column="USER_ID"/>
+		<result property="program_id" column="PROGRAM_ID"/>
+		<result property="program_name" column="PROGRAM_NAME"/>
+		<result property="program_cmt_cnt" column="PROGRAM_CMT_CNT"/>
+		<result property="program_rd_cnt" column="PROGRAM_RD_CNT"/>
+		<result property="program_regdate" column="PROGRAM_REGDATE"/>
+		<result property="workout_list" column="WORKOUT_LIST"/>
+		<result property="program_link" column="PROGRAM_LINK"/>
+	</resultMap>
+	
+	<resultMap type="com.fitess.common.meal.vo.MealVO" id="mealResult">
+		<id property="user_id" column="USER_ID"/>
+		<result property="meal_id" column="MEAL_ID"/>
+		<result property="meal_name" column="MEAL_NAME"/>
+		<result property="meal_cmt_cnt" column="MEAL_CMT_CNT"/>
+		<result property="meal_rd_cnt" column="MEAL_RD_CNT"/>
+		<result property="meal_regdate" column="MEAL_REGDATE"/>
+		<result property="food_list" column="FOOD_LIST"/>
+		<result property="meal_link" column="MEAL_LINK"/>
+	</resultMap>
+	
+	<resultMap type="com.fitess.common.program.vo.ProgramVO" id="programDelCheck">
+		<id property="program_id" column="PROGRAM_ID"/>
+		<result property="program_name" column="PROGRAM_NAME"/>
+		<result property="user_id" column="USER_ID"/>
+		<result property="program_cmt_cnt" column="PROGRAM_CMT_CNT"/>
+		<result property="program_rd_cnt" column="PROGRAM_RD_CNT"/>
+		<result property="program_regdate" column="PROGRAM_REGDATE"/>
+		<result property="workout_list" column="WORKOUT_LIST"/>
+		<result property="program_link" column="PROGRAM_LINK"/>
+	</resultMap>
+	
+	<resultMap type="com.fitess.common.meal.vo.MealVO" id="mealDelCheck">
+		<id property="meal_id" column="MEAL_ID"/>
+		<result property="meal_name" column="MEAL_NAME"/>
+		<result property="user_id" column="USER_ID"/>
+		<result property="meal_cmt_cnt" column="MEAL_CMT_CNT"/>
+		<result property="meal_rd_cnt" column="MEAL_RD_CNT"/>
+		<result property="meal_regdate" column="MEAL_REGDATE"/>
+		<result property="food_list" column="FOOD_LIST"/>
+		<result property="meal_link" column="MEAL_LINK"/>
+	</resultMap>
+	
+	<resultMap type="com.fitess.common.trainer.vo.TrainerVO" id="trainerRequest">
+		<result property="t_id" column="T_ID"/>
+		<result property="user_id" column="USER_ID"/>
+		<result property="t_picture_link" column="T_PICTURE_LINK"/>
+		<result property="t_cname" column="T_CNAME"/>
+		<result property="t_company" column="T_COMPANY"/>
+		<result property="t_createdate" column="T_CREATEDATE"/>
+		<result property="t_clink" column="T_CLINK"/>
+		<result property="t_checkdate" column="T_CHECKDATE"/>
+	</resultMap>
+	
+	<!-- 유저 레벨 가져오기 -->
+	<select id="getUserLevel" resultMap="userLevelResult">
+		SELECT user_level FROM user_info WHERE user_id=#{user_id}
+	</select>
+	
+	<!-- 유저 id 기준으로 프로그램, 식단 가져오기 -->
+	<select id="getProgramFromUser" resultMap="programResult">
+		SELECT * FROM program WHERE user_id=#{user_id}
+	</select>
+	<select id="getMealFromUser" resultMap="mealResult">
+		SELECT * FROM meal WHERE user_id=#{user_id}
+	</select>
+	
+	<!-- 프로그램, 식단 삭제 처리 ( 권한 확인 / 삭제 처리 ) -->
+	<select id="getProgramFromId" resultMap="programDelCheck">
+		SELECT user_id FROM program WHERE program_id=#{program_id}
+	</select>
+	<select id="getMealFromId" resultMap="mealDelCheck">
+		SELECT user_id FROM meal WHERE meal_id=#{meal_id}
+	</select>
+	
+	<delete id="delProgram" parameterType="int">
+		DELETE FROM program WHERE program_id=#{programId}
+	</delete>
+	<delete id="delMeal" parameterType="int">
+		DELETE FROM meal WHERE meal_id=#{mealId}
+	</delete>
+	
+	<!-- 트레이너 요청 확인 -->
+	<select id="getTrainerRequest" resultMap="trainerRequest">
+		SELECT * FROM trainer_cert WHERE t_checkdate=NULL
+	</select>
+	
+	<!-- 트레이너 요청 승인/거부 -->
+	<update id="confirmTrainer" parameterType="int">
+		UPDATE trainer_cert SET t_checkdate=SYSDATE WHERE user_id=#{userId}
+	</update>
+	<delete id="refuseTrainer" parameterType="int">
+		DELETE FROM trainer_cert WHERE user_id=#{userId}
+	</delete>
+	
+	<!-- 정보 수정 -->
+	<update id="modifyUser" parameterType="com.fitess.common.user.vo.MyPageVO">
+		UPDATE user_info SET user_nick=#{user_nick}, user_pw=#{user_pw} WHERE user_id=#{user_id}
+	</update>
+	
+</mapper>

@@ -29,5 +29,5 @@ public interface MyPageDAO {
 	public void confirmTrainer(boolean whether, int userId);
 
 	// 정보 수정 로직
-	public boolean modifyUser(int userId, String modifyNick, String modifyPassword);
+	public void modifyUser(int userId, String modifyNick, String modifyPassword);
 }
