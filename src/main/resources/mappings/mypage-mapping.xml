@@ -1,35 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="MyPageDAO">
-
-	<resultMap type="String" id="userLevelResult">
-		<id property="user_id" column="USER_ID"/>
-		<result property="user_level" column="USER_LEVEL"/>
+	
+	<resultMap type="user_info" id="userResult">
+		<id property="user_id" column="USER_ID" />
+		<result property="user_name" column="USER_NAME" />
+		<result property="user_email" column="USER_EMAIL" />
+		<result property="user_nick" column="USER_NICK" />
+		<result property="user_pw" column="USER_PW" />
+		<result property="term_one" column="TERM_ONE" />
+		<result property="term_two" column="TERM_TWO" />
+		<result property="user_check_date1" column="USER_CHECK_DATE1" />
+		<result property="user_check_date2" column="USER_CHECK_DATE1" />
+		<result property="term_type1" column="TERM_TYPE1" />
+		<result property="term_type2" column="TERM_TYPE2" />
+		<result property="user_regdate" column="USER_REGDATE" />
+		<result property="user_loginMethod" column="USER_LOGINMETHOD" />
+		<result property="user_level" column="USER_LEVEL" />
+		<result property="user_state" column="USER_STATE" />
+		<result property="user_report_count" column="USER_REPORT_COUNT" />
 	</resultMap>
 	
-	<resultMap type="com.fitess.common.program.vo.ProgramVO" id="programResult">
-		<id property="user_id" column="USER_ID"/>
-		<result property="program_id" column="PROGRAM_ID"/>
-		<result property="program_name" column="PROGRAM_NAME"/>
-		<result property="program_cmt_cnt" column="PROGRAM_CMT_CNT"/>
-		<result property="program_rd_cnt" column="PROGRAM_RD_CNT"/>
-		<result property="program_regdate" column="PROGRAM_REGDATE"/>
-		<result property="workout_list" column="WORKOUT_LIST"/>
-		<result property="program_link" column="PROGRAM_LINK"/>
-	</resultMap>
-	
-	<resultMap type="com.fitess.common.meal.vo.MealVO" id="mealResult">
-		<id property="user_id" column="USER_ID"/>
-		<result property="meal_id" column="MEAL_ID"/>
-		<result property="meal_name" column="MEAL_NAME"/>
-		<result property="meal_cmt_cnt" column="MEAL_CMT_CNT"/>
-		<result property="meal_rd_cnt" column="MEAL_RD_CNT"/>
-		<result property="meal_regdate" column="MEAL_REGDATE"/>
-		<result property="food_list" column="FOOD_LIST"/>
-		<result property="meal_link" column="MEAL_LINK"/>
-	</resultMap>
-	
-	<resultMap type="com.fitess.common.program.vo.ProgramVO" id="programDelCheck">
+	<resultMap type="program" id="programResult">
 		<id property="program_id" column="PROGRAM_ID"/>
 		<result property="program_name" column="PROGRAM_NAME"/>
 		<result property="user_id" column="USER_ID"/>
@@ -40,7 +32,7 @@
 		<result property="program_link" column="PROGRAM_LINK"/>
 	</resultMap>
 	
-	<resultMap type="com.fitess.common.meal.vo.MealVO" id="mealDelCheck">
+	<resultMap type="meal" id="mealResult">
 		<id property="meal_id" column="MEAL_ID"/>
 		<result property="meal_name" column="MEAL_NAME"/>
 		<result property="user_id" column="USER_ID"/>
@@ -51,7 +43,7 @@
 		<result property="meal_link" column="MEAL_LINK"/>
 	</resultMap>
 	
-	<resultMap type="com.fitess.common.trainer.vo.TrainerVO" id="trainerRequest">
+	<resultMap type="trainer" id="trainerRequest">
 		<result property="t_id" column="T_ID"/>
 		<result property="user_id" column="USER_ID"/>
 		<result property="t_picture_link" column="T_PICTURE_LINK"/>
@@ -63,7 +55,7 @@
 	</resultMap>
 	
 	<!-- 유저 레벨 가져오기 -->
-	<select id="getUserLevel" resultMap="userLevelResult">
+	<select id="getUserLevel" parameterType="int" resultType="String">
 		SELECT user_level FROM user_info WHERE user_id=#{user_id}
 	</select>
 	
@@ -76,10 +68,10 @@
 	</select>
 	
 	<!-- 프로그램, 식단 삭제 처리 ( 권한 확인 / 삭제 처리 ) -->
-	<select id="getProgramFromId" resultMap="programDelCheck">
+	<select id="getProgramFromId" resultMap="programResult">
 		SELECT user_id FROM program WHERE program_id=#{program_id}
 	</select>
-	<select id="getMealFromId" resultMap="mealDelCheck">
+	<select id="getMealFromId" resultMap="mealResult">
 		SELECT user_id FROM meal WHERE meal_id=#{meal_id}
 	</select>
 	

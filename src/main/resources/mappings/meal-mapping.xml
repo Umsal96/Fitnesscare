@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mappings.meal-mapping">
-
+	<resultMap type="meal" id="mealResult">
+		<id property="meal_id" column="MEAL_ID"/>
+		<result property="meal_name" column="MEAL_NAME"/>
+		<result property="user_id" column="USER_ID"/>
+		<result property="meal_cmt_cnt" column="MEAL_CMT_CNT"/>
+		<result property="meal_rd_cnt" column="MEAL_RD_CNT"/>
+		<result property="meal_regdate" column="MEAL_REGDATE"/>
+		<result property="food_list" column="FOOD_LIST"/>
+		<result property="meal_link" column="MEAL_LINK"/>
+	</resultMap>
+	
+	<insert id="insertMeal" parameterType="meal">
+		INSERT INTO meal(meal_id, meal_name, user_id, workout_list, meal_link)
+		VALUES(${meal_id}, ${meal_name}, ${user_id}, ${workout_list}, ${meal_link})
+	</insert>
 </mapper>

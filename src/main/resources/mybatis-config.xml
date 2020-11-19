@@ -6,7 +6,10 @@
 	<properties resource="db.properties" />
 	<typeAliases>
 		<typeAlias type="com.fitess.common.user.vo.UserVO" alias="user_info"></typeAlias>
-		<typeAlias type="com.fitess.common.user.vo.MyPageVO" alias="user_info"/>
+		<typeAlias type="com.fitess.common.user.vo.MyPageVO" alias="mypage"></typeAlias>
+		<typeAlias type="com.fitess.common.program.vo.ProgramVO" alias="program"></typeAlias>
+		<typeAlias type="com.fitess.common.meal.vo.MealVO" alias="meal"></typeAlias>
+		<typeAlias type="com.fitess.common.trainer.vo.TrainerVO" alias="trainer"></typeAlias>
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">

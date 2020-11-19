@@ -10,31 +10,40 @@ import com.fitess.common.meal.vo.MealVO;
 import com.fitess.common.program.vo.ProgramVO;
 import com.fitess.common.trainer.vo.TrainerVO;
 import com.fitess.common.user.vo.MyPageVO;
+import com.fitess.common.user.vo.UserVO;
 
 public class MyPageDAOImpl implements MyPageDAO {
 
-	@Autowired
+	private static MyPageDAOImpl dao = new MyPageDAOImpl();
+	public static MyPageDAOImpl getInstance() {
+		if(dao == null) {
+			dao = new MyPageDAOImpl();
+		}
+		return dao;
+	}
+	
+	//@Autowired
 	private SqlSessionTemplate sqlSessionTemplate;
 
 	@Override
-	public char getUserLevel(int userId) {
+	public char getUserLevel(int user_id) {
 		char userLevel = 'U';
 		System.out.println("mybatis MyPageDAO.userLevelResult 실행");
-		String userLevelStr = sqlSessionTemplate.selectOne("MyPageDAO.userLevelResult", userId);
+		String userLevelStr = sqlSessionTemplate.selectOne("MyPageDAO.getUserLevel", user_id);
 		userLevel = userLevelStr.charAt(0);
 		return userLevel;
 	}
 
 	@Override
-	public List<ProgramVO> getProgramFromUser(int userId) {
+	public List<ProgramVO> getProgramFromUser(UserVO vo) {
 		System.out.println("mybatis MyPageDAO.programResult 실행");
-		return sqlSessionTemplate.selectList("MyPageDAO.programResult", userId);
+		return sqlSessionTemplate.selectList("MyPageDAO.programResult", vo.getUser_id());
 	}
 
 	@Override
-	public List<MealVO> getMealFromUser(int userId) {
+	public List<MealVO> getMealFromUser(UserVO vo) {
 		System.out.println("mybatis MyPageDAO.mealResult 실행");
-		return sqlSessionTemplate.selectList("MyPageDAO.mealResult", userId);
+		return sqlSessionTemplate.selectList("MyPageDAO.mealResult", vo.getUser_id());
 	}
 
 	@Override
@@ -81,10 +90,10 @@ public class MyPageDAOImpl implements MyPageDAO {
 	}
 
 	@Override
-	public void modifyUser(int userId, String modifyNick, String modifyPassword) {
-		MyPageVO vo = new MyPageVO(userId, modifyNick, modifyPassword);
+	public void modifyUser(UserVO vo) {
+		MyPageVO MyPageVO = new MyPageVO(vo.getUser_id(), vo.getUser_pw(), vo.getUser_nick());
 		System.out.println("mybatis 마이페이지 수정 요청");
-		sqlSessionTemplate.update("MyPageDAO.modifyUser", vo);
+		sqlSessionTemplate.update("MyPageDAO.modifyUser", MyPageVO);
 	}
 
 }

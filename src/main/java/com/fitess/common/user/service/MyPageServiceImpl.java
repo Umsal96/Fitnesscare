@@ -9,6 +9,7 @@ import com.fitess.common.meal.vo.MealVO;
 import com.fitess.common.program.vo.ProgramVO;
 import com.fitess.common.trainer.vo.TrainerVO;
 import com.fitess.common.user.dao.MyPageDAO;
+import com.fitess.common.user.vo.UserVO;
 
 @Service("myPageService")
 public class MyPageServiceImpl implements MyPageDAO {
@@ -17,18 +18,18 @@ public class MyPageServiceImpl implements MyPageDAO {
 	private MyPageDAO myPageDAO;
 
 	@Override
-	public char getUserLevel(int userId) {
-		return myPageDAO.getUserLevel(userId);
+	public char getUserLevel(int user_id) {
+		return myPageDAO.getUserLevel(user_id);
 	}
 
 	@Override
-	public List<ProgramVO> getProgramFromUser(int userId) {
-		return myPageDAO.getProgramFromUser(userId);
+	public List<ProgramVO> getProgramFromUser(UserVO vo) {
+		return myPageDAO.getProgramFromUser(vo);
 	}
 
 	@Override
-	public List<MealVO> getMealFromUser(int userId) {
-		return myPageDAO.getMealFromUser(userId);
+	public List<MealVO> getMealFromUser(UserVO vo) {
+		return myPageDAO.getMealFromUser(vo);
 	}
 
 	@Override
@@ -52,8 +53,8 @@ public class MyPageServiceImpl implements MyPageDAO {
 	}
 
 	@Override
-	public void modifyUser(int userId, String modifyNick, String modifyPassword) {
-		myPageDAO.modifyUser(userId, modifyNick, modifyPassword);
+	public void modifyUser(UserVO vo) {
+		myPageDAO.modifyUser(vo);
 	}
 
 }

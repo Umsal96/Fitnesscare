@@ -5,15 +5,16 @@ import java.util.List;
 import com.fitess.common.meal.vo.MealVO;
 import com.fitess.common.program.vo.ProgramVO;
 import com.fitess.common.trainer.vo.TrainerVO;
+import com.fitess.common.user.vo.UserVO;
 
 public interface MyPageDAO {
 	// 유저의 등급을 확인하는 로직
 	// return -> U : User, T : Trainer, A : Admin
-	public char getUserLevel(int userId);
+	public char getUserLevel(int user_id);
 
 	// 각 사용자가 작성한 프로그램, 식단 추출 로직
-	public List<ProgramVO> getProgramFromUser(int userId);
-	public List<MealVO> getMealFromUser(int userId);
+	public List<ProgramVO> getProgramFromUser(UserVO vo);
+	public List<MealVO> getMealFromUser(UserVO vo);
 
 	// 프로그램과 식단 삭제 로직
 	// del에 userId가 사용되는 이유는 삭제 권한이 있는지 확인하기 위함임.
@@ -29,5 +30,5 @@ public interface MyPageDAO {
 	public void confirmTrainer(boolean whether, int userId);
 
 	// 정보 수정 로직
-	public void modifyUser(int userId, String modifyNick, String modifyPassword);
+	public void modifyUser(UserVO vo);
 }

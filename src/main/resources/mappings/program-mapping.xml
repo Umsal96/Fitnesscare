@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mappings.program-mapping">
-
+	<resultMap type="program" id="programResult">
+		<id property="program_id" column="PROGRAM_ID"/>
+		<result property="program_name" column="PROGRAM_NAME"/>
+		<result property="user_id" column="USER_ID"/>
+		<result property="program_cmt_cnt" column="PROGRAM_CMT_CNT"/>
+		<result property="program_rd_cnt" column="PROGRAM_RD_CNT"/>
+		<result property="program_regdate" column="PROGRAM_REGDATE"/>
+		<result property="workout_list" column="WORKOUT_LIST"/>
+		<result property="program_link" column="PROGRAM_LINK"/>
+	</resultMap>
+	
+	<insert id="insertProgram" parameterType="program">
+		INSERT INTO program(program_id, program_name, user_id, workout_list, program_link)
+		VALUES(${program_id}, ${program_name}, ${user_id}, ${workout_list}, ${program_link})
+	</insert>
 </mapper>
